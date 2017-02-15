@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Guessing Game</title>
+
+    <!-- Bootstrap and CSS here-->
+    <style>
+      .center {
+        text-align: center;
+      }
+      ul {
+          list-style: none;
+          padding: 0;
+      }
+      img {
+          display: inline;
+          width: 200px;
+          height: 100px;
+      }
+      #footer {
+          width: 100%;
+          border-top: solid 2px black;
+          background-color: white;
+          position: fixed;
+          bottom: 0;
+      }
+    </style>
+
+  </head>
+  <body>
+
+      <div id='app'>
+
+        <div id='headers'>
+          <!-- Title and subtitles! -->
+          <h1>Play the Guessing Game!</h1>
+          <h2>Guess a number from 1-100!</h2>
+        </div>
+
+        <div id='main'>
+          <div id='input-parent'>
+            <!-- Player's guess input, and submit button -->
+            <form action="">
+                <input type="number" name="numGuess" min="1" max="100" placeholder="#" autofocus>
+                <input type="submit" value="Go!">
+            </form>
+          </div>
+
+          <div id='guesses'>
+            <!-- unordered list of guesses -->
+            <p>
+            <form action="">
+                <input type="number" name="guess1" placeholder="-" min="1" max="100" disabled>
+                <input type="number" name="guess2" placeholder="-" min="1" max="100" disabled>
+                <input type="number" name="guess3" placeholder="-" min="1" max="100" disabled>
+                <input type="number" name="guess4" placeholder="-" min="1" max="100" disabled>
+                <input type="number" name="guess5" placeholder="-" min="1" max="100" disabled>
+            </form>
+            </p>
+          </div>
+
+          <div id="menu-btns">
+            <!-- reset and hint buttons -->
+             <p>
+            <form action="">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Hint">
+            </form>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+    <div id='footer'>
+        <div>
+          <div class=''>
+            <img src='fa-logo@2x.png'></img>
+          </div>
+
+          <div class=''>
+            <h4>Project by Ruth Naebeck</h4>
+          </div>
+
+          <div class=''>
+            <img src='grace_hopper_academy.png'></img>
+          </div>
+
+
+        </div>
+    </div>
+
+  </body>
+</html>
