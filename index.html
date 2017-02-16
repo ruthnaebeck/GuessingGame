@@ -3,10 +3,11 @@
   <head>
     <title>Guessing Game</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
   </head>
   <body>
 
-      <div id='app' class='center'>
+      <div id='app' class='center container'>
 
         <div id='headers'>
           <!-- Title and subtitles! -->
@@ -14,11 +15,11 @@
           <h3 class='subtitle'>Guess a number from 1-100!</h3>
         </div>
 
-        <div id='main' class='center'>
+        <div id='main'>
           <div id='input-parent'>
             <!-- Player's guess input, and submit button -->
             <input id='player-input' class = 'center' placeholder="#" maxlength='3' autofocus=autofocus></input>
-            <button id='submit'>Go!</button>
+            <button id='submit' class='btn btn-default'>Go!</button>
           </div>
 
           <div id='guesses'>
@@ -34,8 +35,8 @@
 
           <div id="menu-btns">
             <!-- reset and hint buttons -->
-            <button id='reset'>Reset</button>
-            <button id='hint'>Hint</button>
+            <button id='reset' class='btn btn-default'>Reset</button>
+            <button id='hint' class='btn btn-default'>Hint</button>
           </div>
         </div>
       </div>
@@ -43,19 +44,18 @@
 
 
     <div id='footer' class='center'>
-        <div>
-          <div class=''>
+        <div class='row'>
+          <div class='col-sm-4'>
             <img src='fa-logo@2x.png'></img>
           </div>
 
-          <div class=''>
+          <div class='col-sm-4'>
             <h4>Project by Ruth Naebeck</h4>
           </div>
 
-          <div class=''>
+          <div class='col-sm-4'>
             <img src='grace_hopper_academy.png'></img>
           </div>
-
 
         </div>
     </div>
