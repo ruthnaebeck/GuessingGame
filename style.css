@@ -31,6 +31,7 @@ body {
     position: absolute;
     top: 110px;
     left: 110px;
+    background-color: #f6ef46;
 }
 ul {
     list-style: none;
@@ -51,6 +52,14 @@ img {
     font-size: 60px;
     padding: 0px 25px;
     background-color: white;
+}
+#reset {
+    background-color: #81abd5;
+    color: black;
+}
+#hint {
+    background-color: #81abd5;
+    color: black;
 }
 #footer {
     width: 100%;
