@@ -2,7 +2,23 @@
   text-align: center;
 }
 #input-parent {
-  margin: 0 auto;
+  width: 160px;
+  margin: 5% auto 50px;
+  position: relative;
+}
+#player-input {
+    border-radius: 100%;
+    width: 160px;
+    height: 160px;
+    font-size: 60px;
+}
+#submit {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 110px;
+    left: 110px;
 }
 ul {
     list-style: none;
