@@ -20,3 +20,13 @@ img {
     position: fixed;
     bottom: 0;
 }
+#guesses {
+    margin: 1em auto;
+}
+.guess {
+    display: inline;
+    border: 2px solid black;
+    border-radius: 10%;
+    font-size: 60px;
+    padding: 0px 25px;
+}
