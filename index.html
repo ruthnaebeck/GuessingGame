@@ -6,43 +6,43 @@
   </head>
   <body>
 
-      <div id='app'>
+      <div id='app' class='center'>
 
         <div id='headers'>
           <!-- Title and subtitles! -->
-          <h1>Play the Guessing Game!</h1>
-          <h2>Guess a number from 1-100!</h2>
+          <h1 class='title'>Play the Guessing Game!</h1>
+          <h3 class='subtitle'>Guess a number from 1-100!</h3>
         </div>
 
-        <div id='main'>
+        <div id='main' class='center'>
           <div id='input-parent'>
             <!-- Player's guess input, and submit button -->
-            <input placeholder="#" maxlength='3' autofocus=autofocus></input>
-            <button>Go!</button>
+            <input id='player-input' class = 'center' placeholder="#" maxlength='3' autofocus=autofocus></input>
+            <button id='submit'>Go!</button>
           </div>
 
           <div id='guesses'>
             <!-- unordered list of guesses -->
-             <ul>
-              <li>-</li>
-              <li>-</li>
-              <li>-</li>
-              <li>-</li>
-              <li>-</li>
+             <ul class='guess-list'>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
             </ul>
           </div>
 
           <div id="menu-btns">
             <!-- reset and hint buttons -->
-            <button>Reset</button>
-            <button>Hint</button>
+            <button id='reset'>Reset</button>
+            <button id='hint'>Hint</button>
           </div>
         </div>
       </div>
 
 
 
-    <div id='footer'>
+    <div id='footer' class='center'>
         <div>
           <div class=''>
             <img src='fa-logo@2x.png'></img>
