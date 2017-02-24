@@ -67,3 +67,60 @@ Game.prototype.provideHint = function(){
     var hintArr = [this.winningNumber, generateWinningNumber(),generateWinningNumber()];
     return shuffle(hintArr);
 }
+
+function submitGuess(game){
+    var input = +$('#player-input').val();
+    var playerMessage = game.playersGuessSubmission(input);
+
+    function endGame(){
+        $('.title').text(playerMessage);
+        $('.subtitle').text('Click Reset to play again.')
+        $('#submit').attr('disabled','disabled');
+        $('#hint').attr('disabled','disabled');
+    }
+    function updateGuessList(){
+        $(".guess:contains('-')").first().text(input);
+    }
+
+    $('#player-input').val('');
+    if(playerMessage === 'You have already guessed that number.'){
+        $('.title').text('Guess Again!');
+    }else if(playerMessage === 'You Win!'){
+        endGame();
+    }else if(playerMessage === 'You Lose.'){
+        updateGuessList();
+        endGame();
+    }else{
+        updateGuessList();
+        if(game.isLower()){
+            $('.subtitle').text('Guess Higher');
+        }else{
+            $('.subtitle').text('Guess Lower');
+        }
+        $('.title').text(playerMessage);
+    }
+}
+
+$(document).ready(function(){
+    var game = new Game();
+	$('#submit').on('click',function(e){
+        submitGuess(game);
+    });
+    $('#player-input').on('keypress',function(e){
+        if(e.which === 13 && game.pastGuesses.length < 5){
+            submitGuess(game);
+        }
+    });
+    $('#reset').on('click',function(e){
+        game = new Game();
+        $('.title').text('Play the Guessing Game!');
+        $('.subtitle').text('Guess a number from 1-100!')
+        $('.guess').text('-');
+        $('#submit').removeAttr('disabled');
+        $('#hint').removeAttr('disabled');
+    });
+    $('#hint').on('click',function(e){
+        var hintList = game.provideHint();
+        $('.title').text('The answer is in this list: ['+hintList+']');
+    });
+});
